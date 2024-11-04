@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef's Cozy Corner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFF8E1;
+      color: #5C4033;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #8C5A30;
+      color: #FFF8E1;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #D2691E;
+    }
+    nav a {
+      color: #FFF8E1;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #FFB74D;
+    }
+    section {
+      padding: 40px;
+      margin: 20px;
+      border-radius: 8px;
+      background-color: #FFF3E0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #8C5A30;
+    }
+    .about-face button {
+      padding: 8px 15px;
+      border: none;
+      background-color: #FF8A65;
+      color: #FFF;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .about-face button:hover {
+      background-color: #FF7043;
+    }
+    .hidden-info {
+      display: none;
+      margin-top: 10px;
+      color: #5C4033;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #D2691E;
+      color: #FFF8E1;
+    }
+    .contact-section a {
+      color: #FF7043;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .shop-item {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      padding: 10px;
+      background-color: #FBE9E7;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function toggleInfo(id) {
+      var element = document.getElementById(id);
+      if (element.style.display === 'none') {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+
+<header>Chef's Cozy Corner</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#contact">Contact</a>
+  <a href="#picks">Restaurant Picks & Brands</a>
+  <a href="#recipes">Recipes</a>
+  <a href="#shop">Shop</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Welcome to my cozy corner! I’m a passionate chef with a love for seasonal ingredients, travel, and the joy of cooking. Get to know more about me:</p>
+  <div class="about-face">
+    <button onclick="toggleInfo('travels')">My Travels</button>
+    <div id="travels" class="hidden-info">I've traveled to Italy, Japan, and Mexico, learning culinary secrets in every corner.</div>
+    
+    <button onclick="toggleInfo('season')">Favorite Season</button>
+    <div id="season" class="hidden-info">Autumn is my favorite season – perfect for hearty meals and warm flavors.</div>
+    
+    <button onclick="toggleInfo('ingredients')">Best Ingredients</button>
+    <div id="ingredients" class="hidden-info">I can't cook without fresh herbs, organic vegetables, and a dash of love!</div>
+    
+    <button onclick="toggleInfo('hobbies')">Hobbies</button>
+    <div id="hobbies" class="hidden-info">Besides cooking, I enjoy painting, gardening, and reading mystery novels.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I'd love to hear from you! Whether you have a question, a recipe idea, or just want to say hello, feel free to reach out.</p>
+  <p class="contact-section">Send me an email at: <a href="mailto:chef@cozycorner.com">chef@cozycorner.com</a></p>
+  <p>Or leave a message below:</p>
+  <form>
+    <label for="message">Your Message:</label><br>
+    <textarea id="message" rows="5" style="width:100%;" placeholder="Write your message here..."></textarea><br>
+    <button type="submit" style="margin-top: 10px;">Send Message</button>
+  </form>
+</section>
+
+<section id="picks">
+  <h2>Restaurant Picks & Brands</h2>
+  <p>Here are some of my favorite restaurants and brands:</p>
+  <h3>Top Restaurant Picks</h3>
+  <ul>
+    <li>The Rustic Spoon - Known for its farm-to-table meals and cozy ambiance.</li>
+    <li>Season’s Taste - A seasonal-focused menu that changes with each visit.</li>
+    <li>Spice Odyssey - A blend of global flavors that inspire my own cooking!</li>
+  </ul>
+  <h3>My Preferred Cooking Brands</h3>
+  <ul>
+    <li>Le Creuset - For quality cookware that lasts a lifetime.</li>
+    <li>Wüsthof - My go-to brand for sharp, reliable kitchen knives.</li>
+    <li>Staub - Perfect for slow-cooked meals and rich flavors.</li>
+  </ul>
+</section>
+
+<section id="recipes">
+  <h2>Recipes</h2>
+  <p>Explore some of my most cherished recipes, crafted with love and inspired by my travels and the beauty of seasonal ingredients.</p>
+  <ul>
+    <li>Roasted Butternut Squash Soup</li>
+    <li>Autumn Harvest Salad with Maple Dressing</li>
+    <li>Herb-Crusted Lamb Chops</li>
+    <li>Warm Apple Cider with Cinnamon</li>
+  </ul>
+</section>
+
+<section id="shop">
+  <h2>Shop</h2>
+  <p>Bring a piece of my kitchen to yours! Explore my handmade gifts, recipe bundles, and specialty food items:</p>
+  <div class="shop-item">
+    <h3>Recipe Bundle - Cozy Autumn Favorites</h3>
+    <p>10 exclusive recipes to warm up your season!</p>
+  </div>
+  <div class="shop-item">
+    <h3>Handmade Aprons</h3>
+    <p>Stylish, comfortable aprons made with love.</p>
+  </div>
+  <div class="shop-item">
+    <h3>Seasonal Spice Kits</h3>
+    <p>A curated selection of spices perfect for any dish.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2023 Chef's Cozy Corner | Crafted with warmth and a dash of spice
+</footer>
+
+</body>
+</html>
